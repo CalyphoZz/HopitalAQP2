@@ -4,7 +4,7 @@ bundle_ppe_mission2_bootstrap_homepage:
 
 bundle_ppe_mission2_bootstrap_accueil:
     pattern:  /accueil/
-    
+
     defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:accueil }
 
 bundle_ppe_mission2_bootstrap_services:
@@ -14,10 +14,6 @@ bundle_ppe_mission2_bootstrap_services:
 bundle_ppe_mission2_bootstrap_personnel:
     pattern:  /personnel/
     defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:personnel }
-
-bundle_ppe_mission2_bootstrap_annuaire:
-    pattern:  /annuaire/
-    defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:annuaire }
 
 bundle_ppe_mission2_bootstrap_horaires:
     pattern:  /horaires/
@@ -30,4 +26,21 @@ bundle_ppe_mission2_bootstrap_plan:
 bundle_ppe_mission2_bootstrap_infos:
     pattern:  /infos/
     defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:infos }
+
+bundle_ppe_mission2_bootstrap_modifMedecin:
+    pattern:  /modifMedecin/
+    defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:modifMedecin }
+
+bundle_ppe_mission2_bootstrap_modifService:
+    pattern:  /modifService/
+    defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:modifService }
+
+bundle_ppe_mission2_bootstrap_login:
+    pattern:  /login/
+    defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:login }
+
+bundle_ppe_mission2_bootstrap_creation:
+    pattern:  /creation/
+    defaults: { _controller: bundlePPEMission2BootstrapBundle:Default:creation }
+
 

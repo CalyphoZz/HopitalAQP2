@@ -5,22 +5,33 @@ namespace bundlePPEMission2\BootstrapBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * utilisateur
+ * Utilisateur
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="bundlePPEMission2\BootstrapBundle\Entity\UtilisateurRepository")
  */
-class utilisateur
+class Utilisateur
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=20)
      */
     private $login;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="motDePasse", type="string", length=20)
      */
     private $motDePasse;
 
@@ -39,7 +50,7 @@ class utilisateur
      * Set login
      *
      * @param string $login
-     * @return utilisateur
+     * @return Utilisateur
      */
     public function setLogin($login)
     {
@@ -62,7 +73,7 @@ class utilisateur
      * Set motDePasse
      *
      * @param string $motDePasse
-     * @return utilisateur
+     * @return Utilisateur
      */
     public function setMotDePasse($motDePasse)
     {

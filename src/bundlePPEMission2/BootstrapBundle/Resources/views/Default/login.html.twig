@@ -1,0 +1,12 @@
+{% extends 'bundlePPEMission2BootstrapBundle:Default:base.html.twig' %}
+{% block corps %}
+
+<div id="formulaireMedecin"/>
+<form action="" method="post">
+{{form_widget(form)}}
+
+</form>
+<a href="{{path('bundle_ppe_mission2_bootstrap_creation',{})}}">Créer un compte</a>
+</div>
+
+{% endblock %}

@@ -5,24 +5,42 @@ namespace bundlePPEMission2\BootstrapBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * medecin
+ * Medecin
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="bundlePPEMission2\BootstrapBundle\Entity\MedecinRepository")
  */
-class medecin
+class Medecin
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=20)
      */
     private $nom;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=20)
      */
-    private $noTel;
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=10)
+     */
+    private $telephone;
 
 
     /**
@@ -39,7 +57,7 @@ class medecin
      * Set nom
      *
      * @param string $nom
-     * @return medecin
+     * @return Medecin
      */
     public function setNom($nom)
     {
@@ -59,25 +77,48 @@ class medecin
     }
 
     /**
-     * Set noTel
+     * Set prenom
      *
-     * @param string $noTel
-     * @return medecin
+     * @param string $prenom
+     * @return Medecin
      */
-    public function setNoTel($noTel)
+    public function setPrenom($prenom)
     {
-        $this->noTel = $noTel;
+        $this->prenom = $prenom;
     
         return $this;
     }
 
     /**
-     * Get noTel
+     * Get prenom
      *
      * @return string 
      */
-    public function getNoTel()
+    public function getPrenom()
     {
-        return $this->noTel;
+        return $this->prenom;
+    }
+
+    /**
+     * Set telephone
+     *
+     * @param string $telephone
+     * @return Medecin
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return string 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
     }
 }

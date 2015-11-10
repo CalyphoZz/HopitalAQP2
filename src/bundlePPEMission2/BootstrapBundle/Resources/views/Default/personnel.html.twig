@@ -2,11 +2,21 @@
 {% block corps %}
 <h1> Personnel </h1>
 <p id="categorie"> Médecins : </p>
-<p> Vandamme Abigaelle ; Debaudringhien Quentin ; Martel Gaetan ; Vinci Alexis ; Chaibi Fehd </p>
-<p id="categorie"> Infirmiers : </p>
-<p> Jacek Thibault ; Bernard Maxime ; Bocquet Rémi ; Lagdem Mohammed </p>
-<p id="categorie"> Aide soignant(e)s </p>
-<p> Mathieu Sommet ; Antoine Daniel ; Bruce Benraman </p></br></br>
+<div class="col-md-6" id="tableauMedecin">
+<table class="table table-bordered">
+{% for medecin in lesMedecins %}
+
+<tr class="warning">
+	<td> {{ medecin.getNom() }} </td>
+	<td> {{ medecin.getPrenom() }} </td>
+	<td> {{ medecin.getTelephone() }} </td>
+	<td><a href="{{path('bundle_ppe_mission2_bootstrap_modifMedecin',{id:medecin.getId()})}}"> Modifier </a> </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+
 <p id="petit"><u> Vous souhaitez postuler ? Par ici </u></p>
 <div id="btnPostuler">
 <input type="button" class="btn btn-success" value="Postuler"/>

@@ -5,24 +5,35 @@ namespace bundlePPEMission2\BootstrapBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * service
+ * Service
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="bundlePPEMission2\BootstrapBundle\Entity\ServiceRepository")
  */
-class service
+class Service
 {
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="intitule", type="string", length=30)
      */
-    private $libelle;
+    private $intitule;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="numero", type="string", length=10)
      */
-    private $noTel;
+    private $numero;
 
 
     /**
@@ -36,48 +47,48 @@ class service
     }
 
     /**
-     * Set libelle
+     * Set intitule
      *
-     * @param string $libelle
-     * @return service
+     * @param string $intitule
+     * @return Service
      */
-    public function setLibelle($libelle)
+    public function setIntitule($intitule)
     {
-        $this->libelle = $libelle;
+        $this->intitule = $intitule;
     
         return $this;
     }
 
     /**
-     * Get libelle
+     * Get intitule
      *
      * @return string 
      */
-    public function getLibelle()
+    public function getIntitule()
     {
-        return $this->libelle;
+        return $this->intitule;
     }
 
     /**
-     * Set noTel
+     * Set numero
      *
-     * @param string $noTel
-     * @return service
+     * @param string $numero
+     * @return Service
      */
-    public function setNoTel($noTel)
+    public function setNumero($numero)
     {
-        $this->noTel = $noTel;
+        $this->numero = $numero;
     
         return $this;
     }
 
     /**
-     * Get noTel
+     * Get numero
      *
      * @return string 
      */
-    public function getNoTel()
+    public function getNumero()
     {
-        return $this->noTel;
+        return $this->numero;
     }
 }

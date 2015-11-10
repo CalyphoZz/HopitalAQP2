@@ -1,12 +1,17 @@
 {% extends 'bundlePPEMission2BootstrapBundle:Default:base.html.twig' %}
 {% block corps %}
 <h1> Services </h1>
-<ul id="serv">
-<li> Grand brulés </li>
-<li> Cancérologie </li>
-<li> Cardiologie </li>
-<li> Réanimation </li>
-<li> Maternité </li>
-</ul>
-<img class="img-circle" id="servic" src="http://www.mutuelle-infirmier.fr/images/infirmiere.jpg"/>
+<div class="col-md-6" id="tableauMedecin">
+<table class="table table-bordered">
+{% for service in lesServices %}
+
+<tr class="warning">
+	<td> {{ service.getIntitule() }} </td>
+	<td> {{ service.getNumero() }} </td>
+	
+	<td><a href="{{path('bundle_ppe_mission2_bootstrap_modifService',{id:service.getId()})}}"> Modifier </a> </td>
+</tr>
+{% endfor %}
+</table>
+</div>
 {% endblock %}
